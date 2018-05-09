@@ -1,4 +1,4 @@
-.sticky-navbar{
+.sticky-navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -14,7 +14,7 @@
     li{
       padding: 20px 0;
       a{
-        @include font(roboto_thin, 1.8em);
+        font-family: roboto_thin;
         color: $m-gray-light;
         text-decoration: none;
         letter-spacing: 5px;

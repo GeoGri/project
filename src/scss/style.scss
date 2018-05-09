@@ -16,7 +16,9 @@ html, body {
   min-width: 320px;
 }
 
-section{color: $white;}
+section{
+  color: $white;
+  min-height: 555px}
 section > *, footer {padding: 0 90px;}
 
 #home, #skills, #contact, nav {text-transform: uppercase;}
