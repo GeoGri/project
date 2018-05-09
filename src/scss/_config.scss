@@ -1,0 +1,97 @@
+//colors
+$m-gray-dark: #282828;
+$m-gray-middle: #898989;
+$m-gray-light: #d5d3d3;
+$m-input: #ebe8e8;
+$m-purple: #5f5564;
+$m-green: #08ff7b;
+$m-shadow: #636262;
+$m-gray-very-light: #f7f6f6;
+$white: #fff;
+
+
+//fonts
+@font-face {
+	font-family: roboto_thin;
+	src: url('../font/roboto_thin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: roboto_black;
+	src: url('../font/roboto_black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: roboto_regular;
+	src: url('../font/roboto_regular.ttf') format('truetype');
+}
+
+//mixins
+@mixin font($family, $size){
+	font-family: $family;
+	font-size: $size;
+}
+@mixin position($position, $top, $left){
+	position: $position;
+	top: $top;
+	left: $left;
+}
+@mixin object-position($param1, $param2){
+		    object-fit: $param1 $param2;
+
+	-o-object-position: $param1 $param2;
+	   object-position: $param1 $param2;
+}
+@mixin background($file){
+	background: url($file) no-repeat;
+  	background-size: cover;
+}
+@mixin transform-translate($param1, $param2){
+	-webkit-transform: translate($param1, $param2);
+	   -moz-transform: translate($param1, $param2);
+		-ms-transform: translate($param1, $param2);
+		 -o-transform: translate($param1, $param2);
+			transform: translate($param1, $param2);
+}
+@mixin display-Flex(){
+	display: -webkit-box;	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	/* TWEENER - IE 10 */
+	display: -webkit-flex;	/* NEW - Chrome */
+	display: flex;			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+@mixin justify-content($position){
+	-webkit-justify-content: $position;
+	   -moz-justify-content: $position;
+	        justify-content: $position;
+}
+@mixin justify-content-old($position){
+	-webkit-box-pack: $position;
+	   -moz-box-pack: $position;
+	   -ms-flex-pack: $position;
+}
+@mixin flex-direction($direction){
+	-webkit-flex-direction: $direction;
+	   -moz-flex-direction: $direction;
+			flex-direction: $direction;
+}
+@mixin flex-direction-odl($direction){
+	-webkit-box-orient: $direction;
+	   -moz-box-orient: $direction;
+		-ms-box-orient: $direction;
+}
+@mixin flex-flow($direction, $wraping){
+	-webkit-flex-flow: $direction $wraping;
+		-ms-flex-flow: $direction $wraping;
+			flex-flow: $direction $wraping;
+}
+@mixin align-self($direction){
+	-webkit-align-self: $direction;
+		-ms-align-self: $direction;
+			align-self: $direction;
+}
+@mixin align-items($align){
+	-webkit-align-items: $align;
+		-ms-align-items: $align;
+			align-items: $align;
+}

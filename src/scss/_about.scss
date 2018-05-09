@@ -1,0 +1,131 @@
+.section-about{
+  background-color: $m-gray-light;
+  font-family: roboto_black;
+  .subtitle{
+    float: left;
+    padding-right: 0px;
+    h2 {
+      font-size: 65px;
+      padding-top:115px;
+      margin-bottom: 20px;
+      &:after {width: 110px;}
+    }
+  }
+  .personal_details{
+    @include display-Flex();
+    @include flex-flow (row, wrap);
+    @include justify-content-old(justify);
+    @include justify-content(space-around);
+    @include align-items(center);
+    padding-bottom: 10%;
+    font-size: 45px;
+    table {
+      text-align: left;
+      //width: 700px;
+      tr :first-child{text-transform: capitalize;}
+      tr :nth-child(2){text-align: right;}
+      td {vertical-align: top;}
+    }
+    .my_quotation{flex-basis: 700px;}
+    table, .my_quotation{margin: 0 40px;}
+  }
+  .edu_exp {
+    position: relative;
+    height: 600px;
+    background-color: $m-gray-very-light;
+    .services {
+      position: relative;
+      top:-30%;
+      display: flex;
+      flex-flow: row no-wrap;
+      justify-content: space-around;
+      .pointer{
+        display: flex;
+        position: relative;
+      }
+      .servis {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        color: $m-gray-middle;
+        border-radius: 10px;
+        box-shadow: -15px -15px 62px 0px rgba(0, 0, 0, 0.25);
+        margin: 40px;
+        text-align: center;
+        font-size: 30px;
+        h2 {
+          position: relative;
+          text-transform: uppercase;
+          color: $m-purple;
+          font-size: 45px;
+          align-self: center;
+          padding-bottom: 20px;
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-bottom: solid 14px $m-green;
+            left: 0;
+          }
+        }
+        .shool{
+          text-align: left;
+          h3 {margin-bottom: 5px;}
+          .date {color: $m-gray-light;}
+          hr {border: 2px solid $m-gray-light;}
+          .date, hr {margin: 5px;}
+          p {margin-top: 10px;}
+        }
+        .joob {font-size: 35px;}
+        .shool, .joob {padding: 0 50px 100px 50px;}
+      }
+    }
+  }
+.servis:after {
+  content: "";
+  position: absolute;
+  border: 2px solid $m-gray-light;
+  height: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -60px;
+}
+.services:after{
+  content: "";
+  position: absolute;
+  border-bottom: 4px solid $m-gray-light;
+  width: 50%;
+  left: 50%;
+  transform: translate(-51%, 0);
+  bottom: -60px;
+}
+.edu_exp:after{
+  content: "";
+  position: absolute;
+  border: 2px solid $m-gray-light;
+  height: 165px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
+.subtitle h2:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-bottom: solid 14px $m-green;
+  }
+  .subtitle h2 span{color: $m-purple;}
+  .subtitle h2{text-transform: uppercase;}
+  .subtitle{position: relative;}
+  }
+
+@media (max-width: 1300px){
+  .section-about .subtitle{
+    margin: 20px 0;
+    h2 {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+#contact {
+  background: url("../img/contact.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  @include font(roboto_black, 36px);
+  h2{
+    display: inline-block;
+    position: relative;
+    padding-right: 0;
+    @include font(roboto_black, 65px);
+    span{color: $m-purple;}
+    &:after{
+      content: "";
+      position: absolute;
+      width: 110px;
+      bottom: -20px;
+      right: 0;
+      border: solid 7px $m-green;
+    }
+  }
+  .flex_contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    p{flex-basis: 100%;}
+    #map {
+      margin: 20px;
+      height: 500px;
+      width: 45%;
+      border: 1px solid white;
+    }
+    .input_grid{display: grid;}
+    form {
+      margin: 15px;
+      input, textarea {
+        margin: 15px 0;
+        background: $m-input;
+        font-family: roboto_thin;
+        border: 0;
+      }
+      .button{
+        background: $m-green;
+        color: $white;
+        border: 0;
+        border-radius: 10px;
+        font-family: roboto_black;
+        float: right;
+        padding: 5px 30px;
+        -webkit-filter: grayscale(25%);
+        filter: grayscale(25%);
+        &:hover{
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}

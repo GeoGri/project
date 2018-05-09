@@ -1,0 +1,89 @@
+//skills
+#skills{
+  @include font(roboto_regular, 30px);
+  .skills_wrap{
+    @include background("../img/skills.jpg");
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      align-self: flex-end;
+      position: relative;
+      padding: 50px 120px 20px 0;
+      text-align: right;
+      @include font(roboto_black, 65px);
+      span{color: $m-gray-middle;}
+      &:after {
+        content: "";
+        position: absolute;
+        right: 120px;
+        bottom: 0;
+        border-bottom: solid 14px $m-green;
+        width: 110px;
+      }
+    }
+    .skill{
+      & :first-child{text-align: right;}
+      & :last-child{
+        display: inline-table;
+        div {
+          background-color:$m-green;
+          height: 22px;
+          border-left: 0 solid $m-green;
+          margin-right: 50px;
+        }
+      }
+      &>td {padding: 20px 25px;}
+      & td {
+        .win_bar, .pl_bar {border-width: 56vw;}
+        .html_bar {border-width: 44.8vw;}
+        .css_bar, .git_bar {border-width: 28vw;}
+        .lin_bar {border-width: 16.8vw;}
+        .js_bar, .jq_bar, .mysqul_bar, .adobe_bar, .en_bar {border-width: 11.2vw;}
+      }
+    }
+    .table_sapce>td {padding-top: 130px;}
+  }
+  .technology-site{
+    background-color: $m-input;
+    color: $white;
+    p {
+      position: relative;
+      color: $m-purple;
+      text-align: center;
+      @include font(roboto_black, 65px);
+      margin-top: 0;
+      padding: 50px 0;
+      &:after {
+        content: "";
+        border-bottom: solid 14px $m-green;
+        position: absolute;
+        width: 400px;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+      }
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+      margin: 0;
+      li {padding: 50px 100px;}
+      li h3 {text-align: center;}
+      li a img {
+        -webkit-filter: grayscale(25%);
+        filter: grayscale(25%);
+        &:hover{
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+          -webkit-filter: drop-shadow(5px 3px 5px $m-shadow);
+          filter: drop-shadow(5px 3px 5px $m-shadow);
+        }
+      }
+    }
+  }
+}

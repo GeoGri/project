@@ -1,0 +1,51 @@
+.sticky-navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $m-gray-dark;
+  z-index: 1;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include display-Flex();
+    @include justify-content-old(end);
+    @include justify-content(flex-end);
+    li{
+      padding: 20px 0;
+      a{
+        @include font(roboto_thin, 1.8em);
+        color: $m-gray-light;
+        text-decoration: none;
+        letter-spacing: 5px;
+        font-weight: bold;
+
+        padding: 0 20px;
+        border-right: 1px solid $white;
+        &:hover {color: $white;} 
+      }
+    }
+    & :nth-child(4) a, & :last-child a { border: 0;}
+    .myMenuButton {display: none;}
+  }
+}
+
+@media (max-width: 768px){
+  .sticky-navbar ul {
+    li {display: none;}
+    .myMenuButton {
+      display: block;
+      order: -1;
+    }
+  } 
+  .responsive ul {
+    @include flex-direction-odl(vertical);
+    @include flex-direction(column);
+    li {
+      @include align-self(center);
+      display: block;
+      a {border: none;}
+    }
+    .myMenuButton{@include align-self(flex-end);}
+  }
+}

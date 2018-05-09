@@ -1,0 +1,62 @@
+.section-home {
+  @include background("../img/home.jpg");
+  @include position(relative, 0, 0);
+  display: block;
+  .title {
+    @include position(absolute, 12%, 11%);
+    :first-child{padding-left: 15%;}
+    h1{
+      @include font(roboto_black, 72px);
+      letter-spacing: 8px;
+      margin: 0;
+      padding-top: 100px;
+    }
+    h3{
+      @include font(roboto_thin, 30px);
+      margin:auto;
+    }
+    .social-network ul li a img {padding: 0;}
+    h3, .social-network ul li a img{text-align: center;}
+  }
+  .avatar {
+    position: absolute;
+    left: 50%;
+    @include transform-translate(-50%,-50%);
+    //transform: translate(-50%,-50%);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .section-home .title {left: 0;}
+}
+
+@media (max-width: 1600px) {
+  .section-home{
+    .title .initials {display: none;}
+    .avatar {
+      width: 40%;
+      height: auto;
+    }
+    
+  }
+}
+
+@media (max-width: 1300px){
+  .section-home {
+    .avatar {display: none;}
+    .title {
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      text-align: center;
+      :first-child{padding-left: 0;}
+      h1{font-size: 40px;}
+      h3{font-size: 23px;}
+    }
+  }
+
+}
