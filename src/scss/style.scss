@@ -73,17 +73,13 @@ section > *, footer {padding: 0 90px;}
 }  */
 
 //social-network
+/* .social-network{z-index: -1;} */
 .social-network ul {
 	list-style-type: none;
 	li {display: inline-block;}
 	li a img {
-		object-fit: none;
 		height: 54px;
 		width: 54px;
-		&.fb{@include object-position(0, 0);}
-		&.git{@include object-position(-55px, 0);}
-		&.g{@include object-position(-110px, 0);}
-		&.in{@include object-position(-165px, 0);}
 	}
 }
 

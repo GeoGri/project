@@ -22,12 +22,20 @@
   .social-network ul {padding-left: 0;}
 }
 
+@media (min-width: 425px) {
+  .section-home .title h1 {font-size: 35px;}
+}
+
+@media (min-width: 448px) {
+  .section-home .title {padding-top: 100px;}
+}
+
 @media (min-width: 1024px) {
   .section-home { 
     #initials {display: inline;}
-    padding-left: 100px;
+    padding-left: 80px;
     justify-content: flex-start;
-
+    .title{padding-top: 50px;}
     #avatar {
       display: inline;
 
@@ -35,10 +43,10 @@
       left: 50%;
       top: 100%;
 
-      @include transform-translate(-50%,-50%);
+      @include transform-translate(-35%,-50%);
       
       img {
-        width: 100%;
+        width: 60%;
         height: auto;
       }
     }
